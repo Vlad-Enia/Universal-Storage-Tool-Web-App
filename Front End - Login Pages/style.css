@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+html, body
+{
+  height: 100%;
+  margin: 0;
+  font-family: 'Source Sans Pro';
+}
+
+body
+{
+  background-color: #880e4f;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+form
+{
+  max-width: 550px;
+  width:40%;
+}
+
+
+
+form > fieldset
+{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  color: #8a8a8a;
+}
+
+.avatar_container
+{
+  padding: 30px;
+}
+
+.avatar
+{
+  max-width: 150px;
+  max-width: 150px;
+  height: 100%;
+  width: 100%;
+}
+
+.header
+{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form_content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+}
+
+
+form input
+{
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #dddddd;
+  margin-bottom: 20px;
+  width: 80%;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.5s, backround-color 0.5s;
+  
+}
+
+form input:focus
+{
+  border-color: #880e4f;
+  border-radius: 5px;
+  background-color: #d4d4d4; 
+}
+
+form input::placeholder
+{
+  color: #aaaaaa;
+}
+
+.btn
+{
+  padding: 10px;
+  color: #ffffff;
+  background: #880e4f;
+  width: 80%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  margin-bottom: 20px;
+}
+
+.btn:hover
+{
+  background-color: #560027;
+}
+
+
+
+.btn:active
+{
+  background-color: #360018;
+}
+
+.link, .link *
+{
+  color: #880e4f;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+a{
+  -webkit-tap-highlight-color: #86295b73;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+ }
+ /* To remove the blue backround when tapping a link on mobile. */
+
+
+a:visited
+{
+  color: #880e4f;
+  text-decoration: none;
+  
+}
+
+a:hover
+{
+  text-decoration: none;
+  color: #360018;
+}
+
+a:active
+{
+  background-color: #86295b73;
+}
+
+.pswdreset
+{
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+  form
+  {
+
+    height: 90%;
+    width: 90%;
+    
+  }
+
+  .header
+  {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  .avatar_container
+  {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  
+  .form_content
+  {
+    padding: 10px;
+    height: 90%;
+    font-size: 18px;
+    display:flex;
+    justify-content: center;
+  }
+
+  form input
+  {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .btn
+  {
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  a
+  {
+    margin-bottom:10px;
+  }
+
+  .links
+  {
+    margin-top:10px;
+  }
+
+  .link
+  {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UNST Specifications</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="logo5.png" icon="image/png">
+    </head>
+    <body>
+        <header>
+            <h1> UNST - Specifications</h1>
+        </header>
+        <div role="contentinfo">
+            <ol role="directory">
+                <li>
+                    <a href="#introduction">
+                        <span>1.</span>
+                        Introduction
+                    </a>
+                    <ol role="directory">
+                        <li>
+                            <a href="#purpose">
+                                <span>1.1</span>
+                                Purpose
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#conventions">
+                                <span>1.2</span>
+                                Document Conventions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#audience">
+                                <span>1.3</span>
+                                Intended Audience and Reading Suggestions
+                            </a>
+                        </li>
+                        <li>                            
+                            <a href="#scope">
+                                <span>1.4</span>
+                                Product Scope
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#references">
+                                <span>1.5</span>
+                                References
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#description">
+                        <span>2.</span>
+                        Overall Description
+                    </a>
+                    <ol role="directory">
+                        <li>
+                            <a href="#perspective">
+                                <span>2.1</span>
+                                Product Perspective
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#functions">
+                                <span>2.2</span>
+                                Product Functions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#users">
+                                <span>2.3</span>
+                                User Classes and Characteristics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#environment">
+                                <span>2.4</span>
+                                Operating Environment
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#design">
+                                <span>2.5</span>
+                                Design and Implementation Constraints
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#documentation">
+                                <span>2.6</span>
+                                User Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dependencies">
+                                <span>2.7</span>
+                                Assumptions and Dependencies
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#interface">
+                        <span>3.</span>
+                        External Interface Requirements
+                    </a>
+                    <ol role="directory">
+                        <li>
+                            <a href="#user_interface">
+                                <span>3.1</span>
+                                User Interfaces
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#hard_interface">
+                                <span>3.2</span>
+                                Hardware Interfaces
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#soft_interface">
+                                <span>3.3</span>
+                                Software Interfaces
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#communication_interface">
+                                <span>3.4</span>
+                                Communication Interfaces
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#features">
+                        <span>4.</span>
+                        System features
+                    </a>
+                    <ol role="directory">
+                        <li>
+                            <a href="#feature1">
+                                <span>4.1</span>
+                                File Manager
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#feature2">
+                                <span>4.2</span>
+                                File Splitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#feature3">
+                                <span>4.3</span>
+                                File Retriever
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#feature4">
+                                <span>4.4</span>
+                               Account Statistics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#feature5">
+                                <span>4.5</span>
+                                Account Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#feature6">
+                                <span>4.6</span>
+                                Login and Register
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#nonfunctional">
+                        <span>5.</span>
+                        Other Nonfunctional Requirements
+                    </a>
+                    <ol role="directory">
+                        <li>
+                            <a href="#performance_req">
+                                <span>5.1</span>
+                                Performance Requirements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#safety_req">
+                                <span>5.2</span>
+                                Safety Requirements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#security_req">
+                                <span>5.3</span>
+                                Security Requirements
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#glossary">
+                        <span>6.</span>
+                        Other Glossary
+                    </a>
+                </li>
+                <li>
+                    <a href="#team">
+                        <span>7.</span>
+                        Developer Team
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <section role="doc-introduction" id="introduction">
+            <h2>
+                <span>1. </span>
+                Introduction
+            </h2>
+            <p>
+               This documentation contains a presentation of the UNST application, made by Enia Vlad Ieftimie, Gaina Robert-Adrian 
+               and Iurea Marius during the second semester of Faculty of Computer Science Iasi, year 2020-2021.
+            </p>
+            <section id="purpose">
+                <h3>
+                    <span>1.1 </span>
+                    Purpose
+                </h3>
+                <p>
+                    The purpose of this document is to present a detailed description of the open-source software UNST.
+                    It will explain the purpose and the features of the software, the interfaces, what the software will do and
+                    the constraints under which it must operate. This document is indended for anyone interested in this application.
+                </p>
+            </section>
+            <section id="conventions">
+                <h3>
+                    <span>1.2 </span>
+                    Document Conventions
+                </h3>
+                <p>
+                This document was created based on the IEEE template for System Requirement Specification Documents.    
+                </p>
+            </section>
+            <section id="audience">
+                <h3>
+                    <span>1.3 </span>
+                    Intended Audience and Reading Suggestions
+                </h3>
+                <p>
+                    This document is intended for any person interested about UNST application. Some categories of users that can be
+                     distinguished are:
+                </p>
+                    <ul>
+                        <li>Typical Users, who want to use UNST for distributing files into multiple storing clouds.</li>
+                        <li>Programmers who are interested in further developing the software.</li>
+                    </ul>
+    
+            </section>
+            <section id="scope">
+                <h3>
+                    <span>1.4 </span>
+                    Product Scope
+                </h3>
+                <p>
+                    Cloud storage allows you to save data and files in an off-site location that you access either
+                     through the public internet or a dedicated private network connection. However, current implementations
+                     of cloud storage can only save small files and the total space allocated in each solution is limited.
+                </p>
+                <p>
+                    UNST is a tool that helps people store files into different storing environments. They can choose storing
+                    environments and attach them to their UNST account and different ways of splitting their files into shards.
+                    The main purpose of the application is allowing the users to store their files into multiple storage environments.
+                </p>
+            </section>
+            <section id="references">
+                <h3>
+                    <span>1.5 </span>
+                    References
+                </h3>
+                <p>
+                   UNST Github repository:<br>
+                   <a href="https://github.com/robertadriang/Tehnologii_Web">https://github.com/robertadriang/Tehnologii_Web</a><br>
+                   IEEE Template for System Requirements Specification Documents:<br>
+                   <a href="https://github.com/rick4470/IEEE-SRS-Tempate#appendix-b-analysis-models">https://github.com/rick4470/IEEE-SRS-Tempate#appendix-b-analysis-models</a><br>
+                   Scholarly document structur:<br>
+                   <a href="https://w3c.github.io/scholarly-html/#abstract">https://w3c.github.io/scholarly-html/#abstract</a><br>
+                   GNU General Public License:<br>
+                   <a href="https://www.gnu.org/licenses/gpl-3.0.html">https://www.gnu.org/licenses/gpl-3.0.html</a><br>
+                </p>
+            </section>
+        </section>
+        <section role="doc-part" id="description">
+            <h2>
+                <span>2. </span>
+                Overall Description
+            </h2>
+            <section id="perspective">
+                <h3>
+                    <span>2.1 </span>
+                    Product Perspective
+                </h3>
+                <p>
+                    UNST was developed for everyone that is struggling to organize their files and wants to be able to
+                    have quick access to all of their cloud storage environments. It can support big files with multiple formats
+                    and it is able to distribute them into environments based on different criteria. 
+                </p>
+                <p>
+                    UNST is an open source project with a small developer team that is trying to develop their first web application.
+                    It is developed to run on both web and mobile.
+                </p>
+            </section>
+            <section id="functions">
+                <h3>
+                    <span>2.2 </span>
+                    Product Functions
+                </h3>
+                Access acount:
+                <ul>
+                    <li>Sign Up: Create a new account</li>
+                    <li>Login: Login to a previously created account</li>
+                    <li>Forgot Password: Recover your password</li>
+                </ul>
+                Account settings:
+                <ul>
+                    <li>Edit information related to the account (name/password/email etc)</li>
+                </ul>
+                File manager:
+                <ul>
+                    <li>New Folder: Create a new folder in the file system tree</li>
+                    <li>Upload File: Add a new file to the file system tree</li>
+                    <li>Download file: Download a file from the file system tree</li>
+                    <li>Rename: Rename a folder/file</li>
+                    <li>Delete: Delete a folder/file</li>
+                </ul>
+                Cloud Settings:
+                <ul>
+                    <li>Connect environment: Link a new storing cloud to the UNST (Drive/Dropbox/OneDrive)</li>
+                    <li>Remove environment: Remove a storing environment from the UNST account</li>
+                    <li>Remove files with environment checkbox</li>
+                    <li>Splitting method: Choose how a file is distributed (Equal-sized, Percentage of available space, Fixed number of shards/size</li>
+                    <li>Upload/Download speed: Set a maximum uploade/download speed</li>
+                </ul>
+                Stats:
+                <ul>
+                    <li>Total space consumed/available</li>
+                    <li>Connected clouds</li>
+                    <li>Space consumed/available for each cloud</li>
+                    <li>File distribution through cloud</li>
+                    <li>Total files/size uploaded/downloaded</li>
+                    <li>History</li>
+                </ul>
+                About section:
+                <ul>
+                    <li>Redirect to Register</li>
+                    <li>Redirect to Login</li>
+                </ul>
+            </section>
+            <section id="users">
+                <h3>
+                    <span>2.3 </span>
+                    User Classes and Characteristics
+                </h3>
+                    <ul>
+                        <li>Typical Users, who want to use UNST for distributing files into multiple storing clouds.</li>
+                        <li>Programmers who are interested in further developing the software.</li>
+                    </ul>
+            </section>
+            <section id="environment">
+                <h3>
+                    <span>2.4 </span>
+                    Operating Environment
+                </h3>
+                <ul>
+                    <li>Desktop web browser</li>
+                    <li>Mobile web browser</li>
+                </ul>
+            </section>
+            <section id="design">
+                <h3>
+                    <span>2.5 </span>
+                    Design and Implementation Constraints
+                </h3>
+                <p>
+                    UNST is developed in Javascript using Node.js for the server back-end side and uses HTML5 and CSS3 in order to provide a responsive front-end interface.
+                </p>
+            </section>
+            <section id="documentation">
+                <h3>
+                    <span>2.6 </span>
+                    User Documentation
+                </h3>
+                <p>This section will be included when the final solution is available. The documentation will include:</p>
+                <ul>
+                    <li>Presentation page of the application</li>
+                    <li>Presentation video  of the application</li>
+                    <li>User manual</li>
+                </ul>
+            </section>
+            <section id="dependencies">
+                <h3>
+                    <span>2.7 </span>
+                    Assumptions and Dependencies
+                </h3>
+                UNST is developed using Javascript and therefore a web browser is sufficient in order to access the application.
+                However, in order to upload files, storing environments need to be linked to your account.
+            </section>    
+        </section>
+        <section role="doc-part" id="interface">
+            <h2>
+                <span>3. </span>
+                External Interface Requirements
+            </h2>
+            <section id="user_interface">
+                <h3>
+                    <span>3.1 </span>
+                    User Interfaces
+                </h3>
+              <ol>
+                 <li>1. UNST Welcome Screen</li>
+                 <li>2. UNST Login Screen</li>
+                 <li>3. UNST Register Screen</li> 
+                 <li>4. UNST File Listing Screen</li> 
+                 <li>5. UNST Settings Page</li>
+              </ol>
+            </section>
+            <section id="hard_interface">
+                <h3>
+                    <span>3.2 </span>
+                    Hardware Interfaces
+                </h3>
+                <p>The minimum hardware requirements in order to run UNST are the minimum hardware requirements 
+                    of the preferred web browser.
+                </p>
+            </section>
+            <section id="soft_interface">
+                <h3>
+                    <span>3.3 </span>
+                    Software Interfaces
+                </h3>
+                <p>
+                    UNST requires a browser that support and has Javascript enabled.
+                </p>
+                <p>UNST can be connected with a Google Drive, OneDrive or Dropbox account as a storage environment.</p>
+            </section>
+            <section id="communication_interface">
+                <h3>
+                    <span>3.4 </span>
+                    Communications Interfaces
+                </h3>
+                <p>
+                    UNST requires a constant internet connection in order to use all the services available on the platform. Note that the download/upload speed set in the account settings can only be met if your internet speed is at least equal to the value set. 
+                </p>
+            </section>
+        </section>
+        <section role="doc-part" id="features">
+            <h2>
+                <span>4. </span>
+                System Features
+            </h2>
+            <p>
+               This sections shows UNST most important features and explains how they can be used and their results.
+            </p>
+            <section id="feature1">
+                <h3>
+                    <span>4.1 </span>
+                    File manager
+                </h3>
+                <p>
+                    This feature will handle all interactions between the user and his files. It lets the user create, edit or delete any of his files or folders. All the files will be 
+                    stored in a format similar to the windows file system tree. After a file is uploaded by a user using the File manager page, the File manager microservice will set the 
+                    access point for the file in the folder chosen by the user and it will pass the file to splitting microservice.
+                </p>
+            </section>
+            <section id="feature2">
+                <h3>
+                    <span>4.2 </span>
+                    File splitter
+                </h3>
+                <p>
+                    This feature receives files from the file manager microservice and splits it into multiple shards based on the settings preferred by the user. The splitter will check first if
+                    the file needs to be archived (users can also choose to skip this step). If so, the file will be archived using one of the available compressing algorithms (bzip2, gzip or zip).
+                    After this step, the splitter will check what is the preferred method of distributing the file (fixed-size shards, percentage of remaining space in storage environments, fixed number of shards etc...)
+                    and distribute the file following the specified rules in the available storage environments. 
+                </p>
+            </section>
+            <section id="feature3">
+                <h3>
+                    <span>4.3 </span>
+                    File retriever
+                </h3>
+                <p>
+                    This feature allows the user to download files from his File manager page. When a download request is made from the user, the File retriever will check in the database data related to the file (number of shards, location, name of shards, compressing method etc...)
+                    and check if all of them are available(for instance a file could have shards on an environment that was unlinked from the account). If all the shards are recovered from the external storage environments, the file will be recomposed and decompressed (if necessary).
+                    After the file is successfully decompressed the download will start following the specified maximum speed set by the user.
+                </p>
+            </section>
+            <section id="feature4">
+                <h3>
+                    <span>4.4 </span>
+                    Account statistics
+                </h3>
+                <p>
+                    This feature allows the user to keep track of his activity on the UNST app. This microservice handles the available space in the drives, the number of connected drives and other relevant information such as the compression rate of the files, the allocated space for each drive, the total number of files uploaded or data related to network traffic (Total uploaded,downloaded or most used file).
+                </p>
+                <p>Some operations supported by this microservice can generate plots/charts based on your activity showing the distribution of file types or by environments(in case you have a favourite). Another important feature for users might be the history of your uploads/downloads in the last 30 days. All this features should give the user an idea of how you manage your storage platform.</p>
+            </section>
+            <section id="feature5">
+                <h3>
+                    <span>4.5 </span>
+                    Account settings
+                </h3>
+                <p>
+                  This feature is the backbone of all the available features related to the user account. It allows the user tochange his personal information as well as information related to his files. From here
+                  users can set or disconnect the storage environments and allocate a certain amount of them to the UNST application(just in case you still want to have a personal space unrelated to our application).
+                  Other settings regarding the distribution method of files can also be set in this section (for example how big will a shard be or where will it be stored). If there is any customizable setting related to UNST users will find it here.
+                </p>
+            </section>
+            <section id="feature6">
+                <h3>
+                    <span>4.6 </span>
+                    Login and Register
+                </h3>
+                <p>
+                  UNST is currently available only to the users that have an account on our application and at least one account on our supported external storage systems (Google Drive, Dropbox, OneDrive). Therefore, anyone interested in our application needs to register before using the application.
+                </p>
+                <p>Once an account is created, the user can start using the application after logging in. Both Register and Login process use the OAuth method. The UNST team won't store your password account in the plain format but it is recommended that you use a different password from your other accounts.</p>
+            </section>
+        </section>
+        <section role="doc-part" id="requirements">
+            <h2>
+                <span>5. </span>
+                Other Nonfunctional Requirements
+            </h2>
+            <section id="performance_req">
+                <h3>
+                    <span>5.1 </span>
+                    Performance Requirements
+                </h3>
+                <p>
+                    UNST requires a system with a web browser supporting Javascript, HTML5 and CSS3. You can check
+                    if your preferred browser supports UNST  <a href="https://caniuse.com/">here</a>.
+                </p>
+            </section>
+            <section id="safety_req">
+                <h3>
+                    <span>5.2 </span>
+                    Safety Requirements
+                </h3>
+                <p>
+                    To ensure that the UNST's users will not experience any data loses the developer team will push updates
+                    regularly only after all the tests have passed. The deployment process is designed such that big impact bugs should
+                    not appear in production. Any bugs can be reported by the users on the github project page so that the developers can fix it as soon as possible.
+                </p>
+            </section>
+            <section id="security_req">
+                <h3>
+                    <span>5.3 </span>
+                    Security Requirements
+                </h3>
+                <p>
+                    UNST uses the OAuth authentication REST API of the storage environments available so no personal data regarding these environments
+                    is stored by the UNST team. Your account password is stored in a hashed version so your information are not exposed to potential threats.
+                </p>
+            </section>
+        </section>
+        <section role="doc-part" id="glossary">
+            <h2>
+            <span>5. </span>
+            Glossary
+            </h2>
+            <p>This section contains terms used in this document that might be unclear for the users. this section will be extended as the project progresses.</p>
+            <ul>
+                <li>UNST - The abbreviation for the application name. The full name is: Universal Storage Tool.</li>
+                <li>External storage environment - Any external application unrelated to UNST where files can be saved (At the moment we are only referring to Google Drive, Dropbox and OneDrive.</li>
+                <li>OAuth - Industry-standard protocol for authorization that grants website access to their information without giving them the passwords. </li>
+            </ul>
+        </section>
+        <section role="doc-part" id="team">
+            <h2>
+            <span>6. </span>
+            Developer Team
+            </h2>
+            <p>This is an open source project mantained by 3 students from the University of Computer Science Iasi under the supervision of the teachers from Web Technologies.</p>
+            <p>The developer team can be contacted using the following methods:</p>
+            <ul>
+                <li><a href="https://github.com/robertadriang/Tehnologii_Web">Our official Github repository</a></li>
+                <li><a href="mailto:eniavlad@gmail.com">Vlad-Ieftimie Enia (Dev. Team)</a></li>
+                <li><a href="mailto:gainarobertadrian@gmail.com">Robert-Adrian Gaina (Dev. Team)</a></li>
+                <li><a href="mailto:iureamarius@gmail.com">Marius Iurea (Dev. Team)</a></li>
+            </ul>
+        </section>
+    </body>
+</html>

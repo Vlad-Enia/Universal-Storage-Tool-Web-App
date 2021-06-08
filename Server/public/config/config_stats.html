@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>Config Page</title>
+        <link rel="stylesheet" type="text/css" href="../assets/styles/config/style.css">
+        <link rel="stylesheet" type="text/css" href="../assets/styles/config/style_stats.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class ="settings_window">
+            <div id="sidebar" class = "sidebar">
+                <span class="sidebar_button" style="font-size:30px;cursor:pointer " onclick="closeNav()">&#9776;</span>
+                <script>
+                    function closeNav() 
+                    {
+                        document.getElementById("sidebar").style.width = "0";
+                        document.getElementById("sidebar").style.height = "0";
+                        document.getElementById("sidebar").style.display = "none";
+                        document.getElementById("stats_page").style.display = "block";
+                        document.getElementById("stats_page").style.width = "100%";
+                        document.getElementById("stats_page").style.height = "100%";
+                    } 
+                </script>
+                <img class="logo" src="../assets/img/config/logo4.jpg" alt="">
+                <div class="sidebar_header">
+                    <h1>Settings</h1>
+                </div>
+                <div>
+                    <button id="Home" class="btn" type="submit" onclick="window.location.href='/home/index.html'" > Home </button>
+                    <button id="accountbtn" class="btn" type="submit" onclick="window.location.href = 'config_account.html'">Account and Security</button>
+                    <button id="Cloudbtn" class="btn" type="submit" onclick="window.location.href = 'config_cloud.html'">Cloud and bandwidth</button>
+                    <button id="Stats" class="activebtn" type="submit" onclick="window.location.href = 'config_stats.html'">Stats</button>
+                </div>                
+            </div>
+            <div id="stats_page" class = "stats_page">
+                <span class="sidebar_button" style="font-size:30px;cursor:pointer " onclick="openNav()">&#9776;</span>
+                <script>
+                    function openNav() 
+                    {
+                        document.getElementById("sidebar").style.display = "block";
+                        document.getElementById("sidebar").style.width = "100%";
+                        document.getElementById("sidebar").style.height = "100%";
+                        document.getElementById("stats_page").style.display = "none";
+                        document.getElementById("stats_page").style.width = "0";
+                        document.getElementById("stats_page").style.height = "0";
+                        
+                    }
+                </script>
+                <div class = "stats_page_header">
+                    <img class="chart" src="../assets/img/config/chart.svg" alt="">
+                </div>
+                <div class="divider div-line"></div>
+                <div class ="connected_clouds">
+                    <h2>Connected clouds:</h2>
+                    <progress max="3" value="2" data-label="2/3" class="connected_bar"></progress>
+                </div>
+                <div class="distributed_space">
+                    <h2>Space available:</h2>
+                    <div class="break"></div> <!-- break -->
+                    <div class="left_distributed">
+                        <img class="icon" src="../assets/img/config/Google_Drive_icon.svg" alt=""> 
+                        <div class="break"></div> <!-- break -->
+                        <progress max="100" value="33.4" data-label="33.4%" class="chrome_bar"></progress>
+                    </div><br>
+                    <div class="right_distributed">
+                            <img class="dropbox_icon" src="../assets/img/config/Dropbox_icon.svg" alt=""> 
+    
+                        <div class="break"></div> <!-- break -->
+                        <progress max="100" value="100" data-label="Not connected" class="dropbox_bar"></progress>
+                    </div>
+                    <div class="middle_distributed">
+                        <img class="icon" src="../assets/img/config/OneDrive_icon.svg" alt=""> 
+                        <div class="break"></div> <!-- break -->
+                        <progress max="100" value="88.8" data-label="88.8%" class="one_bar"></progress>
+                    </div> 
+
+                </div>
+                <div class="distributed_space">
+                    <h2>Totals:</h2>
+                    <div class="break"></div> <!-- break -->
+                    <div class="totals">
+                      <h2>Space allocations:</h2>
+                      <div class="total_panel">
+                        <div class="stat_name">Used space:</div>
+                        <br><br><br><br>
+                        <div class="dotted-line"></div>
+                        <div class="stat_value"><pr> 10.36GB/16GB</pr>
+                        </div>
+                        
+                        <div class="stat_name_long">File archivation ratio:</div>
+                        <div class="dotted-line2"></div>
+                        <div class="stat_value"><pr>67%</pr>
+                        </div>
+                        <br><br><br><br>
+                        <div class="stat_name_long">Allocated space:</div>
+                        <table class="drive_table" id="drives">
+                            <tr class="table_head">
+                                <td class="table_head">Name</td>
+                                <td class="table_head">Space</td>
+                            </tr>
+                            <tr>
+                                <td class="table_field">Google Drive</td>
+                                <td class="table_value">20GB</td>
+                            </tr>
+                            <tr>
+                                <td class="table_field">Dropbox</td>
+                                <td class="table_value">0GB</td>
+                            </tr>
+                            <tr>
+                                <td class="table_field">OneDrive</td>
+                                <td class="table_value">10GB</td>
+                            </tr>
+                        </table>
+                        <br><br><br><br>
+                        <div class="stat_name_long">Current uploaded:</div>
+                        <div class="dotted-line3"></div>
+                        <div class="stat_value"><pr>60 files</pr>
+                        </div>
+
+                      </div>
+                    </div><br>
+                    <div class="totals">
+                      <h3>File distribution:</h3> <br>
+                      <input type="checkbox" id="toggle" class="offscreen" />
+                      <label for="toggle" class="switch"></label>
+                        <br>
+                        <img class="pie" src="../assets/img/config/chart.png">
+                    </div>
+                    <div class="totals">
+                       <h3>Traffic:</h3><br>
+                       <pr class="stat_name">Total uploaded:</pr>32GB<br>
+                      <pr class="stat_name">Total downloaded: </pr> 56GB<br>
+                      <pr class="stat_name">Most downloaded file: </pr>  <pr class="most_used">test.xlsx</pr> - 32 times<br>
+                      <pr class="stat_name">Last 30 days activity:</pr>  <br>
+                       <img class="history" src="../assets/img/config/15days.png">
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

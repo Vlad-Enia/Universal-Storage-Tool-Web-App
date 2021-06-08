@@ -1,0 +1,8 @@
+node_modules
+build
+npm-debug.log
+.env
+.DS_Store
+*.swp
+Server/user_files
+!Server/user_files/temp

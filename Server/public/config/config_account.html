@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>Config account_page</title>
+        <link rel="stylesheet" type="text/css" href="../assets/styles/config/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class ="settings_window">
+            
+            <div id="sidebar" class = "sidebar">
+                <span class="sidebar_button" style="font-size:30px;cursor:pointer " onclick="closeNav()">&#9776;</span>
+                <script>
+                    function closeNav() 
+                    {
+                        document.getElementById("sidebar").style.width = "0";
+                        document.getElementById("sidebar").style.height = "0";
+                        document.getElementById("sidebar").style.display = "none";
+                        document.getElementById("account_page").style.display = "block";
+                        document.getElementById("account_page").style.width = "100%";
+                        document.getElementById("account_page").style.height = "100%";
+                    } 
+                </script>
+                <img class="logo" src="../assets/img/config/logo4.jpg" alt="">
+                <div class="sidebar_header">
+                    <h1>Settings</h1>
+                </div>
+                <div>
+                    <button id="Home" class="btn" type="submit" onclick="window.location.href='/home/index.html'" > Home </button>
+                    <button id="accountbtn" class="activebtn" type="submit" onclick="window.location.href = 'config_account.html'">Account and Security</button>
+                    <button id="Cloudbtn" class="btn" type="submit" onclick="window.location.href = 'config_cloud.html'">Cloud and bandwidth</button>
+                    <button id="Stats" class="btn" type="submit" onclick="window.location.href = 'config_stats.html'">Stats</button>
+                </div>
+                
+            </div>
+            
+            <div id="account_page" class = "account_page">
+                <span class="sidebar_button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <script>
+                    function openNav() 
+                    {
+                        document.getElementById("sidebar").style.display = "block";
+                        document.getElementById("sidebar").style.width = "100%";
+                        document.getElementById("sidebar").style.height = "100%";
+                        document.getElementById("account_page").style.display = "none";
+                        document.getElementById("account_page").style.width = "0";
+                        document.getElementById("account_page").style.height = "0";
+                    }
+
+                </script>
+                <div class = "account_page_header">
+                    <img class="avatar" src="../assets/img/config/avatar.svg">
+                </div>
+                <form>
+                    <div  class = "account_page_content">
+                        <div class="account_page_username_label">
+                            Username:
+                        </div>
+                        <div class="account_page_username">
+                            *username*
+                        </div>
+
+                        <div class="account_page_username_input">
+                            Change username:
+                            <br/>
+                            <input type="text" class="account_page_input" id="account_page_username_input_field" placeholder="New username"/>
+                        </div>
+                        
+                        <div class="account_page_email_label">
+                            Email:
+                        </div>
+
+                        <div class="account_page_email">
+                            *email*
+                        </div>
+
+                        <div class="account_page_email_input">
+                            Change email adress:
+                            <br/>
+                            <input type="text" class="account_page_input" id="account_page_email_input_field" placeholder="New email adress"/>
+                        </div>
+
+                        <div class="account_page_pswd_label">
+                            Password:
+                        </div>
+
+                        <div class="account_page_pswd_input">
+                            Change password:
+                            <br/>
+                            <input type="text" class="account_page_input" id="account_page_pswd_input_field" placeholder="New password"/>
+                            <input type="text" class="account_page_input" id="account_page_pswd_input_field" placeholder="Confirm new password"/>
+                        </div>
+
+                        <div class = "account_page_submit">
+                            <button id="account_page_submit_button" class="submit_button" type="submit" formaction="config_account.html">Save changes</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </body>
+
+</html>
