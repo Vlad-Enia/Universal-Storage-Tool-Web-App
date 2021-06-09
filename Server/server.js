@@ -83,6 +83,7 @@ router.handle('/config/config_cloud', 'GET', async (req, res) => {
 router.handle('/config/config_cloud', 'POST', async (req, res) => {
     let token=req.headers['storage-code'];
     let token_type=req.headers['token-type'];
+    C
     console.log("Access token:",token,"for the drive:",token_type);
     let object={cloud: token_type,token:token,idUser:1};/// TODO: Replace 1 with actual user ID or change it to send the jwt
     try{

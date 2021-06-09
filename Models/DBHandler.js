@@ -8,7 +8,7 @@ async function createPoll(){
           connectionLimit: 5,
           host: 'localhost',
           user: 'root',
-          password: 'plokijuh1',
+          password: 'student',
           database: 'unst'
         });
         resolve(connection);
