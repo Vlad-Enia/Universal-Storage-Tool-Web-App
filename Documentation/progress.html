@@ -477,7 +477,20 @@
                 Config and Statistics Pages
             </h3>
             <p>
-                <!-- WRITE HERE -->
+                We knew from the start that we needed some settings pages. The most important one is the one dedicated to cloud services. There, you can link and unlink your accounts from the three mentioned cloud storage solutions:
+                <ul>
+                    <li>
+                        Google Drive;
+                    </li>
+                    <li>
+                        DropBox;
+                    </li>
+                    <li>
+                        Microsoft OneDrive;
+                    </li>
+                </ul>
+                This is done by implementing toggle buttons for Connect/Disconnect. How? Whenever the user accesses the config page, a GET request is made to the server to retrieve the status of all three. Based on the response, the buttons are generated dynamically through <b>AJAX</b> calls, thus changing the content of the page without reloading it.
+
             </p>
         </section>
         <section id="download/upload">
@@ -497,7 +510,9 @@
                 Main Page
             </h3>
             <p>
-                <!-- WRITE HERE -->
+                The main page is where the most important events take place. From here you can see all the uploaded files, upload new files, download files, access all the other pages, see a file system tree and see details related to each file.
+                In parallel with the transfer process we started learning about AJAX, DOM and how simple it is to reduce that ~2000 lines html down to only ~200 and generate all the elements based on JSON answers from the server. This technique is currently 
+                used when displaying the files to the user. This allows us to dynamically load elements to the users without refreshing the page, just like we did with the cloud config page.
             </p>
         </section>
     </section>
@@ -507,7 +522,7 @@
             Code Management
         </h2>
         <p>
-            <!-- WRITE HERE -->
+            For code management we used GitHub, with the idea that, for each new functionality or fix, we create a dedicated branch. The link to our GitHub Repo: 
         </p>
     </section>
     <section id="bibliography">
