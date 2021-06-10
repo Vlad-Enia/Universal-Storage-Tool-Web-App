@@ -114,6 +114,7 @@ function createUnorderedList(object){
                 }
             }).then(response => response.blob())    /// -> Read the whole response body (Body.blob())
             .then(blob=>{
+                alert("Download complete")
                 const url=window.URL.createObjectURL(blob);
                 const a=document.createElement('a');
                 a.style.display='none';
@@ -122,6 +123,7 @@ function createUnorderedList(object){
                 document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url); 
+            
             }).catch((error)=>console.log(error));
         }
             

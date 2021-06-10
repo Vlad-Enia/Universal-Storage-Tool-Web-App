@@ -36,12 +36,15 @@ async function registerRequest(){
             })
         })
 
-        if(response.status = 200)
+        if(response.status == 200)
         {
-            alert("Succes");
-            //TODO: redirect to login page;
+            window.location.href = "http://localhost:4200/login/login.html";
         }
-            
+        else if (response.status == 409)
+        {
+            message = await response.text();
+            alert(message);
+        }
 
 
     }
