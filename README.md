@@ -8,7 +8,6 @@ Presentation video:
 https://www.youtube.com/watch?v=qSNkz7WhqCI
 
 Documentation:
-
 https://vlad-enia.github.io/Universal-Storage-Tool-Documentation/
 
 
